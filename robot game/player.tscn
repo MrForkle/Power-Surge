@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://bypm22llha26n"]
+
+[ext_resource type="PackedScene" uid="uid://b3v5pu7s68v76" path="res://Playerdroid.glb" id="1_kjndp"]
+
+[node name="Player" type="Node3D"]
+
+[node name="Playerdroid" parent="." instance=ExtResource("1_kjndp")]

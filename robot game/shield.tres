@@ -1,0 +1,63 @@
+[gd_resource type="VisualShader" load_steps=10 format=3 uid="uid://m442ayi5ip7s"]
+
+[ext_resource type="Texture2D" uid="uid://begscxa2tns0s" path="res://hexagon-pattern-geometry-background-abstract-texture-design-paper-vintage-vector.png" id="1_awojr"]
+
+[sub_resource type="VisualShaderNodeIntParameter" id="VisualShaderNodeIntParameter_fdqgn"]
+parameter_name = "IntParameter"
+default_value_enabled = true
+default_value = 1
+
+[sub_resource type="VisualShaderNodeTexture2DParameter" id="VisualShaderNodeTexture2DParameter_21uu4"]
+parameter_name = "Texture2DParameter"
+
+[sub_resource type="VisualShaderNodeTexture" id="VisualShaderNodeTexture_inm65"]
+texture = ExtResource("1_awojr")
+
+[sub_resource type="VisualShaderNodeVectorDecompose" id="VisualShaderNodeVectorDecompose_cxkx4"]
+default_input_values = [0, Quaternion(0, 0, 0, 0)]
+op_type = 2
+
+[sub_resource type="VisualShaderNodeUVFunc" id="VisualShaderNodeUVFunc_s0jca"]
+function = 1
+
+[sub_resource type="VisualShaderNodeVec2Parameter" id="VisualShaderNodeVec2Parameter_snhwy"]
+parameter_name = "Vector2Parameter"
+default_value_enabled = true
+default_value = Vector2(10, 10)
+
+[sub_resource type="VisualShaderNodeVectorOp" id="VisualShaderNodeVectorOp_yqv5n"]
+output_port_for_preview = 0
+default_input_values = [0, Quaternion(0, 0, 0, 0), 1, Quaternion(0, 0, 0, 0)]
+op_type = 2
+operator = 2
+
+[sub_resource type="VisualShaderNodeColorParameter" id="VisualShaderNodeColorParameter_stvsk"]
+parameter_name = "ColorParameter"
+default_value_enabled = true
+default_value = Color(0.380392, 0.501961, 0.807843, 1)
+
+[resource]
+code = "shader_type spatial;
+render_mode blend_mix, depth_draw_opaque, cull_back, diffuse_lambert, specular_schlick_ggx;
+
+
+
+"
+nodes/fragment/0/position = Vector2(1920, 940)
+nodes/fragment/2/node = SubResource("VisualShaderNodeTexture2DParameter_21uu4")
+nodes/fragment/2/position = Vector2(400, 520)
+nodes/fragment/3/node = SubResource("VisualShaderNodeTexture_inm65")
+nodes/fragment/3/position = Vector2(1100, 940)
+nodes/fragment/4/node = SubResource("VisualShaderNodeVectorDecompose_cxkx4")
+nodes/fragment/4/position = Vector2(1620, 1000)
+nodes/fragment/5/node = SubResource("VisualShaderNodeUVFunc_s0jca")
+nodes/fragment/5/position = Vector2(800, 1040)
+nodes/fragment/6/node = SubResource("VisualShaderNodeVec2Parameter_snhwy")
+nodes/fragment/6/position = Vector2(400, 940)
+nodes/fragment/8/node = SubResource("VisualShaderNodeVectorOp_yqv5n")
+nodes/fragment/8/position = Vector2(1360, 960)
+nodes/fragment/9/node = SubResource("VisualShaderNodeColorParameter_stvsk")
+nodes/fragment/9/position = Vector2(400, 1280)
+nodes/fragment/10/node = SubResource("VisualShaderNodeIntParameter_fdqgn")
+nodes/fragment/10/position = Vector2(400, 1580)
+nodes/fragment/connections = PackedInt32Array(2, 0, 3, 2, 5, 0, 3, 0, 6, 0, 5, 1, 3, 0, 8, 1, 8, 0, 4, 0, 9, 0, 8, 0)

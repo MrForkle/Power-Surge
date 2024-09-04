@@ -1,0 +1,85 @@
+[gd_scene load_steps=13 format=3 uid="uid://cguqmk0o4tk6u"]
+
+[ext_resource type="PackedScene" uid="uid://dlnb8dry2xejh" path="res://scorpian_sting.tscn" id="1_o5fvv"]
+[ext_resource type="Shader" uid="uid://m442ayi5ip7s" path="res://shield.tres" id="2_bvitb"]
+[ext_resource type="PackedScene" uid="uid://bh4qhb3p8pr5i" path="res://rocket.glb" id="3_fu77f"]
+[ext_resource type="Script" path="res://rocket.gd" id="4_fwiut"]
+[ext_resource type="Shader" uid="uid://bcudwbvph5ky3" path="res://Smoke.tres" id="5_7tgcv"]
+
+[sub_resource type="GDScript" id="GDScript_sjf7t"]
+script/source = "extends Node3D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	$\"Scorpian_sting/AnimationPlayer\".set_autoplay(\"ArmatureAction_001\")
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1i8w2"]
+render_priority = 0
+shader = ExtResource("2_bvitb")
+
+[sub_resource type="SphereMesh" id="SphereMesh_cwoig"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_x8xmm"]
+angle_min = -720.0
+angle_max = 720.0
+inherit_velocity_ratio = 1.0
+direction = Vector3(0, -1, 0)
+spread = 11.675
+initial_velocity_min = 3.0
+initial_velocity_max = 10.0
+gravity = Vector3(0, 0, 0)
+collision_mode = 1
+collision_friction = 0.0
+collision_bounce = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3vbn4"]
+render_priority = 0
+shader = ExtResource("5_7tgcv")
+shader_parameter/FloatParameter = 0.75
+
+[sub_resource type="SphereMesh" id="SphereMesh_bewpg"]
+material = SubResource("ShaderMaterial_3vbn4")
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_tgaao"]
+height = 5.70682
+radius = 1.0752
+
+[node name="Node3D" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.193411)
+script = SubResource("GDScript_sjf7t")
+
+[node name="Scorpian_sting" parent="." instance=ExtResource("1_o5fvv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.160668, 0, -0.0111694)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(5.60964, 0, 0, 0, 5.60964, 0, 0, 0, 5.60964, 24.0051, 0, 0)
+material_override = SubResource("ShaderMaterial_1i8w2")
+mesh = SubResource("SphereMesh_cwoig")
+
+[node name="RigidBody3D" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.33531, 0, -4.55122)
+mass = 226.215
+
+[node name="rocket" parent="RigidBody3D" instance=ExtResource("3_fu77f")]
+script = ExtResource("4_fwiut")
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="RigidBody3D/rocket"]
+transform = Transform3D(1, 0, 0, 0, 2.90257, 0, 0, 0, 1, 0, -5.8043, 0)
+amount = 500
+lifetime = 3.0
+fixed_fps = 60
+process_material = SubResource("ParticleProcessMaterial_x8xmm")
+draw_pass_1 = SubResource("SphereMesh_bewpg")
+
+[node name="Camera3D" type="Camera3D" parent="RigidBody3D/rocket"]
+transform = Transform3D(-0.996967, -0.00716293, -0.0774983, 0.0645855, 0.479486, -0.875169, 0.0434282, -0.87752, -0.477569, 0.330574, -10.2582, -5.30861)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="RigidBody3D/rocket/Camera3D"]
+transform = Transform3D(1, 0, 0, 0, 1, -2.98023e-08, -3.72529e-09, 0, 1, 2.80198, 6.36452, -0.154516)
+omni_range = 201.587
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0215559, -3.84195, 0)
+shape = SubResource("CylinderShape3D_tgaao")
