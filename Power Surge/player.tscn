@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://bypm22llha26n"]
+[gd_scene load_steps=2 format=3 uid="uid://d0o7vuxkxlmeg"]
 
-[ext_resource type="PackedScene" uid="uid://b3v5pu7s68v76" path="res://Playerdroid.glb" id="1_kjndp"]
+[ext_resource type="PackedScene" uid="uid://b3v5pu7s68v76" path="res://Player/Meshes/Playerdroid.glb" id="1_kjndp"]
 
 [node name="Player" type="Node3D"]
 

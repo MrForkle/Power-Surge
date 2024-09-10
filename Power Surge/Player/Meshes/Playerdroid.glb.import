@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://chbb7eb212vau"
-path="res://.godot/imported/Scorpian_sting.glb-e5620a758c1799bcab21bc7a4719a0fc.scn"
+uid="uid://b3v5pu7s68v76"
+path="res://.godot/imported/Playerdroid.glb-e9c7bc69f06535c70d8a7ebea2080ca9.scn"
 
 [deps]
 
-source_file="res://Scorpian_sting.glb"
-dest_files=["res://.godot/imported/Scorpian_sting.glb-e5620a758c1799bcab21bc7a4719a0fc.scn"]
+source_file="res://Player/Meshes/Playerdroid.glb"
+dest_files=["res://.godot/imported/Playerdroid.glb-e9c7bc69f06535c70d8a7ebea2080ca9.scn"]
 
 [params]
 
@@ -17,6 +17,7 @@ nodes/root_type=""
 nodes/root_name=""
 nodes/apply_root_scale=true
 nodes/root_scale=1.0
+nodes/import_as_skeleton_bones=false
 meshes/ensure_tangents=true
 meshes/generate_lods=true
 meshes/create_shadow_meshes=true
@@ -28,6 +29,7 @@ animation/import=true
 animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
+animation/import_rest_as_RESET=false
 import_script/path=""
 _subresources={}
 gltf/naming_version=1

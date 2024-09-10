@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://b3v5pu7s68v76"
-path="res://.godot/imported/Playerdroid.glb-45511d0dbcd25d120754dc6b217c1617.scn"
+uid="uid://1u5xdpckwhpi"
+path="res://.godot/imported/ch1.glb-bc2dd0fa83a2dfaf0482a71da29392f1.scn"
 
 [deps]
 
-source_file="res://Playerdroid.glb"
-dest_files=["res://.godot/imported/Playerdroid.glb-45511d0dbcd25d120754dc6b217c1617.scn"]
+source_file="res://Level 1/Meshes/ch1.glb"
+dest_files=["res://.godot/imported/ch1.glb-bc2dd0fa83a2dfaf0482a71da29392f1.scn"]
 
 [params]
 

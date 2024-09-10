@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://myrsqikai3ld"
-path="res://.godot/imported/Player sphere.glb-6ef34dfe64fd093b9f677b78b83e2bed.scn"
+uid="uid://cv6kexmukstyx"
+path="res://.godot/imported/Scorpian.glb-092aabbea69e4eff8622b077d391d700.scn"
 
 [deps]
 
-source_file="res://Player sphere.glb"
-dest_files=["res://.godot/imported/Player sphere.glb-6ef34dfe64fd093b9f677b78b83e2bed.scn"]
+source_file="res://Scorpian/Meshes/Scorpian.glb"
+dest_files=["res://.godot/imported/Scorpian.glb-092aabbea69e4eff8622b077d391d700.scn"]
 
 [params]
 

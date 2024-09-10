@@ -1,6 +1,6 @@
 [gd_scene load_steps=68 format=4 uid="uid://ctm7wsp1e8vfq"]
 
-[ext_resource type="Shader" uid="uid://1hn4nxi0l4vt" path="res://railgun.tres" id="1_38sic"]
+[ext_resource type="Shader" uid="uid://1hn4nxi0l4vt" path="res://Player/Shaders/railgun.tres" id="1_38sic"]
 [ext_resource type="Script" path="res://gpu_particles_3d.gd" id="2_wvx4s"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hkiw6"]

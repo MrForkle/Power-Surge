@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=3 uid="uid://cguqmk0o4tk6u"]
 
-[ext_resource type="PackedScene" uid="uid://dlnb8dry2xejh" path="res://scorpian_sting.tscn" id="1_o5fvv"]
+[ext_resource type="PackedScene" uid="uid://dlnb8dry2xejh" path="res://Scorpian/scorpian_sting.tscn" id="1_o5fvv"]
 [ext_resource type="Shader" uid="uid://m442ayi5ip7s" path="res://shield.tres" id="2_bvitb"]
 [ext_resource type="PackedScene" uid="uid://bh4qhb3p8pr5i" path="res://rocket.glb" id="3_fu77f"]
 [ext_resource type="Script" path="res://rocket.gd" id="4_fwiut"]

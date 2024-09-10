@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://1u5xdpckwhpi"
-path="res://.godot/imported/ch1.glb-705f9a490b5d1f0dddf0ef1152cf380d.scn"
+uid="uid://chbb7eb212vau"
+path="res://.godot/imported/Scorpian_sting.glb-335722e0514804c2998a59b7b9ecbfd0.scn"
 
 [deps]
 
-source_file="res://ch1.glb"
-dest_files=["res://.godot/imported/ch1.glb-705f9a490b5d1f0dddf0ef1152cf380d.scn"]
+source_file="res://Scorpian/Meshes/Scorpian_sting.glb"
+dest_files=["res://.godot/imported/Scorpian_sting.glb-335722e0514804c2998a59b7b9ecbfd0.scn"]
 
 [params]
 
